@@ -79,7 +79,7 @@ export default function PotluckInvite() {
             Potluck Time
           </h1>
           <p className="text-lg text-orange-50 font-medium mb-6">
-            Kelas 12 Angkatan 2025
+            Last Year L305
           </p>
           
           {/* Event Details Card */}
@@ -246,7 +246,7 @@ export default function PotluckInvite() {
 
         <div className="mt-8 text-center text-gray-400 text-xs">
           <p>Jangan lupa datang tepat waktu ya!</p>
-          <p>© Panitia Kegiatan Sekolah 2025</p>
+          <p>© Pak Frenaldi</p>
         </div>
       </main>
 
