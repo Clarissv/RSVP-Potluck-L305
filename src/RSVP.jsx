@@ -43,7 +43,7 @@ export default function PotluckInvite() {
   // Handle delete participant with password
   const handleDelete = (id) => {
     const password = prompt('Masukkan password untuk menghapus:');
-    if (password === 'Frenaldi') {
+    if (password === 'Frenaldi#234') {
       setParticipants(participants.filter(p => p.id !== id));
     } else if (password !== null) {
       alert('Password salah!');
@@ -246,7 +246,7 @@ export default function PotluckInvite() {
 
         <div className="mt-8 text-center text-gray-400 text-xs">
           <p>Jangan lupa datang tepat waktu ya!</p>
-          <p>© Pak Frenaldi</p>
+          <p>© Pak Frenaldi Powered by Gemini & Claude</p>
         </div>
       </main>
 
