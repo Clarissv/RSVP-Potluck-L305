@@ -40,9 +40,14 @@ export default function PotluckInvite() {
     }
   };
 
-  // Handle delete participant
+  // Handle delete participant with password
   const handleDelete = (id) => {
-    setParticipants(participants.filter(p => p.id !== id));
+    const password = prompt('Masukkan password untuk menghapus:');
+    if (password === 'Frenaldi') {
+      setParticipants(participants.filter(p => p.id !== id));
+    } else if (password !== null) {
+      alert('Password salah!');
+    }
   };
 
   // Helper untuk ikon kategori
@@ -74,24 +79,24 @@ export default function PotluckInvite() {
             Potluck Time
           </h1>
           <p className="text-lg text-orange-50 font-medium mb-6">
-            Kelas 12 Angkatan 2024
+            Kelas 12 Angkatan 2025
           </p>
           
           {/* Event Details Card */}
           <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 border border-white/30 flex justify-between items-center text-sm md:text-base">
             <div className="flex flex-col items-center">
               <Calendar className="mb-1" size={20} />
-              <span className="font-bold">Sabtu, 25 Nov</span>
+              <span className="font-bold">Jumat, 5 Des</span>
             </div>
             <div className="h-8 w-px bg-white/40"></div>
             <div className="flex flex-col items-center">
               <Clock className="mb-1" size={20} />
-              <span className="font-bold">10:00 WIB</span>
+              <span className="font-bold">12:00 WIB</span>
             </div>
             <div className="h-8 w-px bg-white/40"></div>
             <div className="flex flex-col items-center">
               <MapPin className="mb-1" size={20} />
-              <span className="font-bold">Aula Sekolah</span>
+              <span className="font-bold">Ruangan Ax208</span>
             </div>
           </div>
         </div>
