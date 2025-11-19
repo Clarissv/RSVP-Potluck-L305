@@ -86,7 +86,7 @@ export default function PotluckInvite() {
           <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 border border-white/30 flex justify-between items-center text-sm md:text-base">
             <div className="flex flex-col items-center">
               <Calendar className="mb-1" size={20} />
-              <span className="font-bold">Jumat, 5 Des</span>
+              <span className="font-bold">Jumat, 12 Des</span>
             </div>
             <div className="h-8 w-px bg-white/40"></div>
             <div className="flex flex-col items-center">
