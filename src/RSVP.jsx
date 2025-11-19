@@ -96,7 +96,7 @@ export default function PotluckInvite() {
             <div className="h-8 w-px bg-white/40"></div>
             <div className="flex flex-col items-center">
               <MapPin className="mb-1" size={20} />
-              <span className="font-bold">Ruangan Ax208</span>
+              <span className="font-bold">Ruangan F208</span>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function PotluckInvite() {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all" 
-                      placeholder="Cth: Andi Pratama"
+                      placeholder="Cth: Frenaldi"
                       required
                     />
                   </div>
