@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, MapPin, Utensils, Heart, CheckCircle, Plus, User, Coffee, Pizza, Cake } from 'lucide-react';
+import { Calendar, Clock, MapPin, Utensils, Heart, CheckCircle, Plus, User, Coffee, Pizza, Cake, Trash2 } from 'lucide-react';
 
 export default function PotluckInvite() {
   // State untuk daftar peserta dan menu (Simulasi database)
@@ -40,6 +40,11 @@ export default function PotluckInvite() {
     }
   };
 
+  // Handle delete participant
+  const handleDelete = (id) => {
+    setParticipants(participants.filter(p => p.id !== id));
+  };
+
   // Helper untuk ikon kategori
   const getCategoryIcon = (cat) => {
     switch(cat) {
@@ -63,7 +68,7 @@ export default function PotluckInvite() {
 
         <div className="max-w-md mx-auto text-center relative z-10">
           <div className="inline-block bg-white text-orange-500 px-4 py-1 rounded-full text-sm font-bold mb-4 shadow-sm animate-bounce">
-            🍽️ Let's Eat Together!
+            🍽️ Christmas Potluck!
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight drop-shadow-sm">
             Potluck Time
@@ -216,6 +221,13 @@ export default function PotluckInvite() {
                   <div className="text-xs px-2 py-1 rounded bg-gray-100 text-gray-500 capitalize">
                      {p.category === 'main' ? 'Makanan' : p.category === 'drink' ? 'Minuman' : 'Snack'}
                   </div>
+                  <button
+                    onClick={() => handleDelete(p.id)}
+                    className="text-red-400 hover:text-red-600 hover:bg-red-50 p-2 rounded-lg transition-colors"
+                    title="Hapus"
+                  >
+                    <Trash2 size={16} />
+                  </button>
                 </div>
               ))}
             </div>
